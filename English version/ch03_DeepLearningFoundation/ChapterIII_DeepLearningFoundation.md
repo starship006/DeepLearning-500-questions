@@ -103,7 +103,7 @@ Some platforms are specifically developed for deep learning research and applica
 ### 3.1.5 Why is deep neural network difficult to train?
 
 
-1. Gradient Gradient
+1. Vanishing Gradient
     The disappearance of the gradient means that the gradient will become smaller and smaller as seen from the back and the front through the hidden layer, indicating that the learning of the front layer will be significantly slower than the learning of the latter layer, so the learning will get stuck unless the gradient becomes larger.
 
     The reason for the disappearance of the gradient is affected by many factors, such as the size of the learning rate, the initialization of the network parameters, and the edge effect of the activation function. In the deep neural network, the gradient calculated by each neuron is passed to the previous layer, and the gradient received by the shallower neurons is affected by all previous layer gradients. If the calculated gradient value is very small, as the number of layers increases, the obtained gradient update information will decay exponentially, and the gradient disappears. The figure below shows the learning rate of different hidden layers:
